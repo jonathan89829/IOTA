@@ -32,3 +32,5 @@ run()
     .then(() => console.log("Done"))
     .catch((err) => console.error(err));
 ```
+## Next step
+You can use the Sending_data.js in the Sending data file to send the message on the private net.  
