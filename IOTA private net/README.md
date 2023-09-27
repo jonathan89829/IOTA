@@ -81,7 +81,7 @@ cd ../explorer
 sudo ./tangle-explorer.sh install ../hornet-private-net
 ```
 
-### Adding extra nodes
+## Adding extra nodes
 These are the following steps:
 ```
 cd ./extra-nodes
