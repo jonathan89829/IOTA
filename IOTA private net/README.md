@@ -90,3 +90,4 @@ sudo ./private-hornet.sh install "my-node:14266:15601:8082"
 ```
 
 ## Next
+To send the data on the private net please check the Sending data file.  
