@@ -13,7 +13,7 @@ And now you can use the following code to check if you can connect to the privat
 const { SingleNodeClient } = require("@iota/iota.js");
 
 async function run() {
-    const client = new SingleNodeClient("https://chrysalis-nodes.iota.org");
+    const client = new SingleNodeClient("http//your ip:14265");
 
     const info = await client.info();
     console.log("Node Info");
