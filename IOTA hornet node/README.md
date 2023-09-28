@@ -69,7 +69,7 @@ Before you create the folder, there is an error in the prepare_docker.sh, use th
 ```
 vim prepare_docker.sh
 ```
-Press "I" to insert and if you finish the change just press ESC, then save this file using the following command, the first on is the regular saving and quit command and the second on is for read only file:
+Press "I" to insert and if you finish the change just press ESC, then save this file using the following command, the first one is the regular saving and quit command and the second on is for read only file:
 ```
 :wq
 :w !sudo tee %
@@ -82,4 +82,30 @@ sudo ./prepare_docker.sh
 First run the following command to generate a password hosh and salt for the dashboard:
 ```
 sudo docker-compose run hornet tool pwd-hash
+```
+And then add the following lines to .env file:
+```
+DASHBOARD_PASSWORD=0000000000000000000000000000000000000000000000000000000000000000
+DASHBOARD_SALT=0000000000000000000000000000000000000000000000000000000000000000
 ```  
+If you want to change the default admin username, you can add this line to your .env file:
+```
+DASHBOARD_USERNAME=someotherusername
+```
+### Enable additional monitoring
+Add the following line in the .env file:
+```
+COMPOSE_PROFILES=monitoring
+```
+## Run
+### Starting the node
+You can start the Hornet node by running:
+```
+sudo docker-compose up -d
+```
+After starting the node you can check the dashboard on http://localhost/dashboard and API on http://localhost/api/routes.
+Stopping the node by runnung:
+```
+sudo docker-compose down
+```
+
