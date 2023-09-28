@@ -69,7 +69,7 @@ Before you create the folder, there is an error in the prepare_docker.sh, use th
 ```
 vim prepare_docker.sh
 ```
-Press "i" to insert and if you finish the change just press ESC, then save this file using the following command, the first on is the regular saving and quit command and the second on is for read only file:
+Press "I" to insert and if you finish the change just press ESC, then save this file using the following command, the first on is the regular saving and quit command and the second on is for read only file:
 ```
 :wq
 :w !sudo tee %
@@ -79,3 +79,7 @@ After that run the following command:
 sudo ./prepare_docker.sh
 ```
 ### Set dashboard credentials
+First run the following command to generate a password hosh and salt for the dashboard:
+```
+sudo docker-compose run hornet tool pwd-hash
+```  
