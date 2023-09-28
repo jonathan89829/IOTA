@@ -1,2 +1,2 @@
 # IOTA
-This file is for any IOTA project.
+This folder is for any IOTA project.
